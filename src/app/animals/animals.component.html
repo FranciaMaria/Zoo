@@ -1,7 +1,16 @@
-<ul>
-	<li *ngFor="let animal of AnimalList">
-		{{animal.vrsta}}
-		{{animal.ime}}
-		{{animal.datumRodjenja}}
-	</li>
-</ul>
+<table *ngFor="let animal of AnimalList">
+		<tr>
+			<th>Vrsta</th>
+			<th>Ime</th>
+			<th>Datum rodjenja</th>
+		</tr>
+		<tr>
+			<td>{{animal.vrsta}}</td>
+		</tr>
+		<tr>
+			<td>{{animal.ime}}</td>
+		</tr>
+		<tr>
+			<td>{{animal.datumRodjenja}}</td>
+		</tr>
+</table>

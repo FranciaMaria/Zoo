@@ -23,7 +23,7 @@ export class AnimalsComponent {
 		{
  			vrsta: 'slon',
  			ime: 'Kika',
- 			datumRodjenja: '1999-06-11'
+ 			datumRodjenja: 'Nepoznat'
 		},
 
 		{
@@ -35,7 +35,7 @@ export class AnimalsComponent {
 		{
  			vrsta: 'ptica',
  			ime: 'Po',
- 			datumRodjenja: '2000-08-15'
+ 			datumRodjenja: 'Nepoznat'
 		}
 
 	];
