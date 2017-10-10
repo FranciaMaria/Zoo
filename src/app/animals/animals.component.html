@@ -14,4 +14,7 @@
 			<td *ngIf="animal.DateOfBirth.length > 0">{{animal.DateOfBirth}}</td>
 			<td *ngIf="animal.DateOfBirth.length === 0">{{isNotDateOfBirth}}</td>
 		</tr>
+		<tr>
+			<td><button (click)='MoveToTopAnimal(i)'>Move To Top</button></td>
+		</tr>
 </table>

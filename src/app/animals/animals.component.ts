@@ -21,11 +21,17 @@ export class AnimalsComponent {
 
 	];
 
-	isDateOfBirth:string = 'Nepoznat';
+	isNotDateOfBirth:string = 'Nepoznat';
 
 
 	deleteAnimal(x){
     	this.AnimalList.splice(x, 1);
+	}
+
+	MoveToTopAnimal(x){
+		let change = this.AnimalList[x];
+    	this.AnimalList[x] = this.AnimalList[0];
+    	this.AnimalList[0] = change;
 	}
 
 	
