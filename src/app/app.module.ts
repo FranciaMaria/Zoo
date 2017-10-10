@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AnimalsComponent } from './animals/animals.component';
+import { Animal } from './animals/animals';
 
 
 @NgModule({

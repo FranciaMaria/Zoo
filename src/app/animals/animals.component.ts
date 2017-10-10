@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Animal } from './animals';
 
 @Component({
   selector: 'app-animals',
@@ -8,35 +9,15 @@ export class AnimalsComponent {
 
 	AnimalList:Array<Object> = [
 
-		{
- 			vrsta: 'macka',
- 			ime: 'Lulu',
- 			datumRodjenja: '1976-02-12'
-		},
+		new Animal('macka', 'Lulu', '1976-02-12'),
 
-		{
- 			vrsta: 'konj',
- 			ime: 'Spirit',
- 			datumRodjenja: '1990-07-02'
-		},
+		new Animal('konj', 'Spirit', '1990-07-02'),
 
-		{
- 			vrsta: 'slon',
- 			ime: 'Kika',
- 			datumRodjenja: ''
-		},
+		new Animal('slon', 'Kika', ""),
 
-		{
- 			vrsta: 'zmija',
- 			ime: 'Su',
- 			datumRodjenja: '2010-05-09'
-		},
+		new Animal('zmija','Su', '2010-05-09'),
 
-		{
- 			vrsta: 'ptica',
- 			ime: 'Po',
- 			datumRodjenja: ''
-		}
+		new Animal('ptica', 'Po', ""),
 
 	];
 
@@ -46,5 +27,7 @@ export class AnimalsComponent {
 	deleteAnimal(x){
     	this.AnimalList.splice(x, 1);
 	}
+
+	
 
 }

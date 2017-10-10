@@ -1,11 +1,11 @@
-<table *ngFor="let animal of AnimalList; let i = index;">
+<table *ngFor='let animal of AnimalList; let i = index; '>
 		<tr>
-			<th>Vrsta</th>
-			<th>Ime</th>
-			<th>Datum rodjenja</th>
+			<th>Species</th>
+			<th>Name</th>
+			<th>Date of Birth</th>
 		</tr>
 		<tr>
-			<td (click)="deleteAnimal(i)">{{animal.vrsta}}</td>
+			<td (click)='deleteAnimal(i)'>{{animal.vrsta}}</td>
 		</tr>
 		<tr>
 			<td>{{animal.ime}}</td>
