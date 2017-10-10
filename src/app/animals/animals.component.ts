@@ -23,7 +23,7 @@ export class AnimalsComponent {
 		{
  			vrsta: 'slon',
  			ime: 'Kika',
- 			datumRodjenja: 'Nepoznat'
+ 			datumRodjenja: ''
 		},
 
 		{
@@ -35,9 +35,11 @@ export class AnimalsComponent {
 		{
  			vrsta: 'ptica',
  			ime: 'Po',
- 			datumRodjenja: 'Nepoznat'
+ 			datumRodjenja: ''
 		}
 
 	];
+
+	isNotDatumRodjenja:string = 'Nepoznat';
 
 }

@@ -11,6 +11,7 @@
 			<td>{{animal.ime}}</td>
 		</tr>
 		<tr>
-			<td>{{animal.datumRodjenja}}</td>
+			<td *ngIf="animal.datumRodjenja.length > 0">{{animal.datumRodjenja}}</td>
+			<td *ngIf="animal.datumRodjenja.length === 0">{{isNotDatumRodjenja}}</td>
 		</tr>
 </table>
