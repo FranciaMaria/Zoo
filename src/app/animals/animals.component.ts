@@ -42,4 +42,9 @@ export class AnimalsComponent {
 
 	isNotDatumRodjenja:string = 'Nepoznat';
 
+
+	deleteAnimal(x){
+    	this.AnimalList.splice(x, 1);
+	}
+
 }
