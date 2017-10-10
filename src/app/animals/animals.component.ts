@@ -21,7 +21,7 @@ export class AnimalsComponent {
 
 	];
 
-	isNotDatumRodjenja:string = 'Nepoznat';
+	isDateOfBirth:string = 'Nepoznat';
 
 
 	deleteAnimal(x){
