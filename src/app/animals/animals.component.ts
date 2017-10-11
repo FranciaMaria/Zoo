@@ -18,8 +18,8 @@ export class AnimalsComponent {
 	AnimalList: any[];
 
 	sectors = [];
-   	sector: Sector = new Sector('Unknow', 'Unknow'); 
-   	newAnimal: Animal = new Animal('','','', this.sector[0]);
+   	sector: Sector = new Sector('', ''); 
+   	newAnimal: Animal = new Animal('','','', this.sector);
 
 	constructor() { 
 
@@ -60,7 +60,10 @@ export class AnimalsComponent {
 
 	addAnimal() {
     	this.AnimalList.push(this.newAnimal);
-    	this.newAnimal = new Animal('','','', this.sector[0]);
+    	this.sectors.push(this.sector);
+    	this.sector = new Sector('', '');
+    	this.newAnimal = new Animal('','','', this.sector);
+   	
   	}
 
   	showAnimalsBySector(sector) {	

@@ -8,6 +8,12 @@
     <label for="DateOfBirth">Date of birth:</label>
     <input name="DateOfBirth" type="text" [(ngModel)]="newAnimal.DateOfBirth"/>
 
+    <label for="sector-name">Sector name:</label>
+    <input name="sector-name" type="text" [(ngModel)]="sector.name"/>
+
+    <label for="surface">Surface:</label>
+    <input name="surface" type="text" [(ngModel)]="sector.surface"/>
+
     <button (click)="addAnimal(newAnimal)">Add Animal</button>
 </form>
 
