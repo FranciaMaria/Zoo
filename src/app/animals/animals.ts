@@ -2,16 +2,22 @@ import { Sector } from './sector';
 
 export class Animal {
 
-  		Species:string; 
-  		Name:string; 
-  		DateOfBirth:string;
+  		species:string; 
+
+  		name:string; 
+
+  		dateOfBirth:string;
+
   		sector: Sector;
 
-  		constructor(Species:string, Name:string, DateOfBirth:string, sector: Sector){
+  		constructor(species:string, name:string, dateOfBirth:string, sector: Sector){
 
-  			this.Species = Species;
-  			this.Name = Name;
-  			this.DateOfBirth = DateOfBirth;
+  		  this.species = species;
+
+  			this.name = name;
+
+  			this.dateOfBirth = dateOfBirth;
+        
   			this.sector = sector;
   		}
 }

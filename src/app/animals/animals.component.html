@@ -1,12 +1,13 @@
 <form>
-    <label for="Species">Species:</label>
-    <input name="Species" type="text" [(ngModel)]="newAnimal.Species"/>
+
+    <label for="species">Species:</label>
+    <input name="species" type="text" [(ngModel)]="newAnimal.species"/>
   
-    <label for="Name">Name:</label>
-    <input name="Name" type="text" [(ngModel)]="newAnimal.Name"/>
+    <label for="name">Name:</label>
+    <input name="name" type="text" [(ngModel)]="newAnimal.name"/>
   
-    <label for="DateOfBirth">Date of birth:</label>
-    <input name="DateOfBirth" type="text" [(ngModel)]="newAnimal.DateOfBirth"/>
+    <label for="dateOfBirth">Date of birth:</label>
+    <input name="dateOfBirth" type="text" [(ngModel)]="newAnimal.dateOfBirth"/>
 
     <label for="sector-name">Sector name:</label>
     <input name="sector-name" type="text" [(ngModel)]="sector.name"/>
@@ -15,42 +16,72 @@
     <input name="surface" type="text" [(ngModel)]="sector.surface"/>
 
     <button (click)="addAnimal(newAnimal)">Add Animal</button>
+
 </form>
 
 <table *ngFor='let animal of AnimalList; let i = index; '>
+
 		<tr>
+
 			<th>Species</th>
+
 			<th>Name</th>
+
 			<th>Date of Birth</th>
+
 			<th>Sector name</th>
+
 			<th>Sector surface</th>
 
 		</tr>
+
 		<tr>
-			<td>{{animal.Species}}</td>
-			<td>{{animal.Name}}</td>
-			<td *ngIf="animal.DateOfBirth.length > 0">{{animal.DateOfBirth}}</td>
-			<td *ngIf="animal.DateOfBirth.length === 0">{{isNotDateOfBirth}}</td>
+
+			<td>{{animal.species}}</td>
+
+			<td>{{animal.name}}</td>
+
+			<td *ngIf="animal.dateOfBirth.length > 0">{{animal.dateOfBirth}}</td>
+			<td *ngIf="animal.dateOfBirth.length === 0">{{isNotdateOfBirth}}</td>
+
+
 			<td > {{ animal.sector.name }} </td>
+
 			<td > {{ animal.sector.surface }} </td>
 
+
 			<td (click)='deleteAnimal(i)'><strong>Remove</strong></td>
+
 			<td><button (click)='MoveToTopAnimal(i)'>Move To Top</button></td>
+
 		</tr>
+
 </table>
 
 <table>
+
 	<thead>
+
 		<th>Sector name</th>
+
 		<th>Surface</th>
+
 	</thead>
+
 	<tbody>
+
 		<tr *ngFor="let sector of sectors">
+
 			<td> {{ sector.name }}</td>
+
 			<td> {{ sector.surface }}</td>
+
 			<button (click)="showAnimalsBySector(sector)">View list of animals</button>
+
 		</tr>
+
 	</tbody>
+	
 </table>
 
 

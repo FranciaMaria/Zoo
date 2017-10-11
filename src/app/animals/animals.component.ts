@@ -4,29 +4,37 @@ import { Sector } from './sector';
 
 import { NgModel } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-
 import { NgModule} from '@angular/core'; 
 import {BrowserModule} from '@angular/platform-browser';
 
 
 @Component({
+
   selector: 'app-animals',
+
   templateUrl: './animals.component.html'
 })
+
 export class AnimalsComponent {
 	
 	AnimalList: any[];
 
 	sectors = [];
-   	sector: Sector = new Sector('', ''); 
+
+   	sector: Sector = new Sector('', '');
+
    	newAnimal: Animal = new Animal('','','', this.sector);
 
 	constructor() { 
 
 		this.sectors = [  
+
       		new Sector ('Water-animals', 'Water'),
+
       		new Sector ('Fawl','Kages'),
+
       		new Sector ('Predators', 'Kages'),
+
       		new Sector ('Mammal', 'Kages')	
     	];
 
@@ -46,32 +54,45 @@ export class AnimalsComponent {
 		];
 	}
 
-	isNotDateOfBirth:string = 'Nepoznat';
+	isNotdateOfBirth:string = 'Nepoznat';
 
-	deleteAnimal(x){
-    	this.AnimalList.splice(x, 1);
+	deleteAnimal(index){
+
+    	this.AnimalList.splice(index, 1);
 	}
 
-	MoveToTopAnimal(x){
-		let change = this.AnimalList[x];
-    	this.AnimalList[x] = this.AnimalList[0];
+	MoveToTopAnimal(index){
+
+		let change = this.AnimalList[index];
+
+    	this.AnimalList[index] = this.AnimalList[0];
+
     	this.AnimalList[0] = change;
 	}
 
 	addAnimal() {
+
     	this.AnimalList.push(this.newAnimal);
+
     	this.sectors.push(this.sector);
+
     	this.sector = new Sector('', '');
+
     	this.newAnimal = new Animal('','','', this.sector);
    	
   	}
 
   	showAnimalsBySector(sector) {	
+
 		const animalsList=[];		
-		this.AnimalList.forEach(function(animal) {
+
+		this.AnimalList.forEach(animal => {
+
 			if(animal.sector && animal.sector.name === sector.name) 
-				animalsList.push(animal.Name + '-' + animal.Species); 
+
+				animalsList.push(animal.name + '-' + animal.species); 
 		});		
+
 		alert(animalsList.toString());
 	}
 
