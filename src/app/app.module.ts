@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AnimalsComponent } from './animals/animals.component';
 import { Animal } from './animals/animals';
+import { Sector } from './animals/sector';
 
 
 @NgModule({
@@ -12,9 +14,11 @@ import { Animal } from './animals/animals';
     AnimalsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
